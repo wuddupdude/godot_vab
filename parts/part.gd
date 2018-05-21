@@ -63,6 +63,7 @@ func _unhandled_input(event):
 			set_global_pos(get_global_mouse_pos())
 
 func _ready():
+	print(get_node("CollisionPolygon2D").get_build_mode())
 	set_mode(MODE_STATIC)
 	set_pickable(true)
 	connect("mouse_enter", self, "_on_mouse_enter")

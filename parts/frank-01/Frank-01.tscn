@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://parts/part.gd" type="Script" id=1]
 [ext_resource path="res://parts/frank-01/frank-01.png" type="Texture" id=2]
+[ext_resource path="res://parts/collision_polygon_2d.gd" type="Script" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -43,6 +44,11 @@ build_mode = 0
 polygon = Vector2Array( 8, 49.5, -8, 49.5, -8, -49.5, 8, -49.5 )
 shape_range = Vector2( 0, 0 )
 trigger = false
+script/script = ExtResource( 3 )
+top = false
+bottom = false
+left = false
+right = false
 
 [node name="DownRay" type="RayCast2D" parent="."]
 
